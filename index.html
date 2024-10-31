@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Dates Master</title>
+		<link rel="stylesheet" href="css/main.css" />
+		<link rel="stylesheet" href="css/date-formation-section.css" />
+		<link rel="stylesheet" href="css/dob-converter.css" />
+		<script type="module" src="./js/main.js"></script>
+		<link
+			rel="shortcut icon"
+			href="./imgs/first-clock.png"
+			type="image/x-icon"
+		/>
+	</head>
+	<body>
+		<nav class="nav">
+			<ul class="nav__ul">
+				<a href="/"> Home </a>
+				<a id="get-old-diag-btn"> Date of Birth Converter </a>
+				<a> Age Difference </a>
+			</ul>
+		</nav>
+		<dialog id="show-get-olds">
+			<section id="get-olds-container">
+				<p id="close-diag">X</p>
+				<div class="get-olds-input-container">
+					<form id="dateOfBirth">
+						<div>
+							Enter here birthday format:
+							<li>"YYYY-MM-DD"</li>
+							<li>"MM-DD-YYYY"</li>
+						</div>
+						<br />
+						<input
+							placeholder="Enter your Date of birth"
+							type="text"
+							name="date-of-birth"
+						/>
+						<br />
+						<button>Convert =></button>
+					</form>
+				</div>
+				<div class="output-container">
+					<table>
+						<thead>
+							<tr>
+								<th>Stamps</th>
+								<th>Formatted</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Olds</td>
+								<td id="olds-cell">Years</td>
+							</tr>
+							<tr>
+								<td>Months</td>
+								<td id="months-cell">Months</td>
+							</tr>
+							<tr>
+								<td>Weeks</td>
+								<td id="weeks-cell">Weeks</td>
+							</tr>
+							<tr>
+								<td>Days</td>
+								<td id="days-cell">Days</td>
+							</tr>
+							<tr>
+								<td>Hours</td>
+								<td id="hours-cell">Hours</td>
+							</tr>
+							<tr>
+								<td>Minutes</td>
+								<td id="minutes-cell">Minutes</td>
+							</tr>
+							<tr>
+								<td>Seconds</td>
+								<td id="seconds-cell">Seconds</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</dialog>
+		<main>
+			<section class="timer-container">
+				<div class="timer__display">
+					<h5>Locale Time</h5>
+					<code class="locale-timer">00:00:00</code>
+				</div>
+				<div class="timer__display">
+					<h5>UTC Time</h5>
+					<code class="utc-timer">00:00:00</code>
+				</div>
+			</section>
+			<!-- mil seconds to time formating -->
+			<section class="miliseconds-formatter">
+				<div class="input-container">
+					<form id="miliseconds-input">
+						<input
+							placeholder="Enter mili-seconds"
+							type="number"
+							name="miliseconds"
+						/>
+						<br />
+						<button>Convert =></button>
+					</form>
+				</div>
+				<div class="output-container">
+					<table>
+						<thead>
+							<tr>
+								<th>Standard</th>
+								<th>Formatted</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Locale Zone</td>
+								<td id="locale-cell">Your machine date format</td>
+							</tr>
+							<tr>
+								<td>UTC Zone</td>
+								<td id="utc-cell">UTC date format</td>
+							</tr>
+							<tr>
+								<td>ISO Format</td>
+								<td id="iso-cell">ISO date format</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</section>
+		</main>
+		<footer style="text-align: right; margin-right: 10px">
+			Deigns & Developed by
+			<a href="https://github.com/MdAzizulHaqueWebDev" target="_blank"
+				>Azizul Haque</a
+			>
+		</footer>
+	</body>
+</html>
